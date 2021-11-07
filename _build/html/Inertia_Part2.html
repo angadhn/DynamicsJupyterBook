@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Theorems for computing \([I]^{S/O}\) &#8212; Computational Dynamics</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Learn More" href="docs/learn_more.html" />
+    <link rel="prev" title="Mass/Inertia Scalars" href="Inertia_Part1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/qe-logo-large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Dynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Kinematics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Kinematics.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mass and Inertia Scalars
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inertia.html">
+   Mass/ Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inertia_Part1.html">
+   Mass/Inertia Scalars
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Key Theorems for computing
+   <span style="color:violet">
+    <span class="math notranslate nohighlight">
+     \([I]^{S/O}\)
+    </span>
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Other parts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="docs/learn_more.html">
+   Learn More
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Inertia_Part2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-theorem">
+   1. Rotation theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parallel-axes-theorem">
+   2. Parallel axes theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composite-theorem">
+   3. Composite theorem
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="key-theorems-for-computing-span-style-color-violet-i-s-o-span">
+<h1>Key Theorems for computing <span style="color:violet"> <span class="math notranslate nohighlight">\([I]^{S/O}\)</span> </span><a class="headerlink" href="#key-theorems-for-computing-span-style-color-violet-i-s-o-span" title="Permalink to this headline">¶</a></h1>
+<p>There are three useful theorems to compute moments of inertia. They are:</p>
+<ol class="simple">
+<li><p><strong>Rotation theorem</strong></p></li>
+<li><p><strong>Parallel axis theorem</strong> (or translation theorem)</p></li>
+<li><p><strong>Composite theorem</strong></p></li>
+</ol>
+<p>Let us examine them in further detail.</p>
+<div class="section" id="rotation-theorem">
+<h2>1. Rotation theorem<a class="headerlink" href="#rotation-theorem" title="Permalink to this headline">¶</a></h2>
+<img src="2_Inertia/theory_img2/im1.png">
+<ul class="simple">
+<li><p>In the figure <strong>X-Y-Z</strong> make up a cartesian coordinate system. O is the origin.
+<span style="color:violet"> n<sub>x</sub>,  n<sub>y</sub>,  n<sub>z</sub>  </span> are unit vectors directed along <strong>X,Y</strong> and <strong>Z</strong> respectively. The unit vectos represent a reference frame <span style="color:violet"> N </span>.</p></li>
+<li><p>Also, the figure shows a rocket which has a reference frame <span style="color:green">R</span> attached to it. You are given the inertia matrix of the rocket <span style="color:green"> R </span> about O along the unit vectors of frame N.
+Naturally, this reference frame also has 3 mutually orthogonal unit vectors:
+<span style="color:green"> r<sub>x</sub>,  r<sub>y</sub>,  r<sub>z</sub>  </span></p></li>
+</ul>
+<p>So far, given</p>
+<img src="2_Inertia/theory_img2/eq1.png">
+<ul class="simple">
+<li><p>Now, we can define another inertia matrix for <span style="color:green"> R </span> about O along the newly introduced rotating reference frame’s unit vectors <span style="color:green"> r<sub>x</sub>,  r<sub>y</sub>,  r<sub>z</sub>  </span>. This matrix and its elements are:</p></li>
+</ul>
+<img src="2_Inertia/theory_img2/eq2.png">
+<p><span style="color:red"> Question:  </span>
+How are the two matrices related?</p>
+<ul class="simple">
+<li><p>We begin by assuming that <span style="color:green"> R  </span> is a particle of mass, m<sub>R</sub>.</p></li>
+<li><p>let us consoder a product of inertia from each matrix.</p></li>
+</ul>
+<img src="2_Inertia/theory_img2/eq3.png">
+<ul class="simple">
+<li><p>P* is a position vecotr from O to the origin of the frame <span style="color:green"> R </span>.</p></li>
+</ul>
+<p>We know from our discussion on direction cosine matrices that the unit vectors of <span style="color:green"> R </span> can be related to the unit vectors of <span style="color:violet"> N </span> as:</p>
+<img src="2_Inertia/theory_img2/eq4.png">
+<p><sup><span style="color:green"> R </span></sup>C<sup><span style="color:violet"> N </span></sup> is the direction cosine matrix of <span style="color:green"> R </span> in <span style="color:violet"> N </span>. It is a 3-by-3 matrix, which we shall assume has the following elements.</p>
+<img src="2_Inertia/theory_img2/eq5.png">
+<p>So, we can now easily derive:</p>
+<img src="2_Inertia/theory_img2/eq6.png">
+<p>And then, we can rewrite the product of inertia <span style="color:green"> J<sub>xy</sub><sup>R/O</sup> </span> as:</p>
+<img src="2_Inertia/theory_img2/eq7.png">
+<p>This leads to</p>
+<img src="2_Inertia/theory_img2/eq8.png">
+<p>or in terms of matrix multiplication.</p>
+<img src="2_Inertia/theory_img2/eq9.png">
+<p>More generally, it can be shown that</p>
+<img src="2_Inertia/theory_img2/eq10.png">
+</div>
+<div class="section" id="parallel-axes-theorem">
+<h2>2. Parallel axes theorem<a class="headerlink" href="#parallel-axes-theorem" title="Permalink to this headline">¶</a></h2>
+<p>In the previoussection we presumed that the rocket was a point mass. What happens if this assumption is relaxed and rockets are better approximated as a system of particles?</p>
+<ul class="simple">
+<li><p>P* is a position vector from O to <span style="color:green"> R* </span>,the origin of the frame <span style="color:green"> R </span></p></li>
+<li><p><span style="color:green"> R* </span> is he mass center of the rocket</p></li>
+<li><p>P<sub>i</sub> is a position vector from o to <span style="color:red"> P<sub>i</sub> </span>, the i<sup>th</sup> particle on the rocket body.</p></li>
+<li><p>r<sub>i</sub> is a position vector from <span style="color:green"> R* </span> to <span style="color:red"> P<sub>i</sub> </span>. So,</p></li>
+</ul>
+<p>P<sub>i</sub> = P* + r<sub>i</sub></p>
+<img src="2_Inertia/theory_img2/im2.png">
+<p>Now, we know that the product of inertia for this system of particles along the <span style="color:red"> n<sub>x</sub>, n<sub>y</sub>  </span>  directions given by:</p>
+<img src="2_Inertia/theory_img2/eq11.png">
+<p>The terms highlighted in green go to zero because $<span class="math notranslate nohighlight">\(\sum_im_ir_i = 0\)</span>$ by the definition of mass centers.</p>
+<img src="2_Inertia/theory_img2/eq12.png">
+<p><span style="color:violet"> I<sub>xy</sub><sup><span style="color:green"> R/R* </span></sup> </span> is the product of inertia of <span style="color:green"> R </span> about the mass center <span style="color:green"> R* </span>.</p>
+<p><span style="color:violet"> I<sub>xy</sub><sup><span style="color:green"> R* /O </span></sup> </span> is the product of inertia of <span style="color:green"> R* </span> about O.</p>
+<p>Some comments:</p>
+<ol class="simple">
+<li><p>This result extrapolates to the moment of inertia scalars. For example,</p></li>
+</ol>
+<img src="2_Inertia/theory_img2/eq13.png">
+<ol class="simple">
+<li><p>This result extrapolates to the inertia matrix</p></li>
+</ol>
+<img src="2_Inertia/theory_img2/eq14.png">
+<ol class="simple">
+<li><p>This rule is only valid when going through the mass center.</p></li>
+</ol>
+</div>
+<div class="section" id="composite-theorem">
+<h2>3. Composite theorem<a class="headerlink" href="#composite-theorem" title="Permalink to this headline">¶</a></h2>
+<img src="2_Inertia/theory_img2/im3.png">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Inertia_Part1.html" title="previous page">Mass/Inertia Scalars</a>
+    <a class='right-next' id="next-link" href="docs/learn_more.html" title="next page">Learn More</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Angadh Nanjangud<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
